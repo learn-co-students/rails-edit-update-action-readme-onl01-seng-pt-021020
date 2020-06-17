@@ -1,0 +1,16 @@
+<%= form_for @article do |f| %>
+  <%= f.label 'Article Title' %><br>
+  <%= f.text_field :title %><br>
+ 
+  <%= f.label 'Article Description' %><br>
+  <%= f.text_area :description %><br>
+ 
+  <%= f.submit "Submit Article" %>
+<% end %>
+
+
+<!-- In this casee, form_for takes care of some work for us. Using the object @article we've provided, form_for determines that @article is not a new instance of the Article class. Because of this, form_for knows to automatically send to the update path.
+
+Since @article is not a new instance of Article, the inputs on this form, the text field and text area, will be populated with the corresponding object values.
+
+When submitted, the form will be routed to the update action. Before we try to implement the update action, let's first make sure the data is being routed properly. -->
